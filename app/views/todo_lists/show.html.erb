@@ -1,15 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="card-header d-flex justify-content-between">
+  <span>
+     <%= @todo_list.title %>
+  </span>
+  <%= link_to 'Edit', edit_todo_list_path(@todo_list), class: 'btn btn-danger btn-sm' %>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo_list.title %>
-</p>
-
-<ul>
-    <% @todo_list.todo_items.each do |todo_item| %>
-      <li><%= todo_item.description %></li>
-    <% end %>
+<ul class="list-group">
+  <% @todo_list.todo_items.each do |todo_item| %>
+    <li class="list-group-item">
+      <%= todo_item.description %>
+    </li>
+  <% end %>
 </ul>
 
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>
+

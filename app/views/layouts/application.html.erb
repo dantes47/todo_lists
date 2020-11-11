@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TodoLists</title>
+    <title>Todo Lists</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,8 +14,9 @@
   <body class="bg-dark">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 coli-lg-8 offset-md-1 offset-lg-2">
-          <div class="card mt-7">
+        <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+          <p id="notice"><%= notice %></p>
+          <div class="card mt-4">
             <%= yield %>
           </div>
         </div>
