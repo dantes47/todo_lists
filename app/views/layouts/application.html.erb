@@ -5,11 +5,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 coli-lg-8 offset-md-1 offset-lg-2">
+          <div class="card mt-7">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script src="https://kit.fontawesome.com/fa49d6c40e.js" crossorigin="anonymous"></script>
   </body>
 </html>
