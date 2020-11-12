@@ -2,12 +2,12 @@
 
 one:
   description: MyText
-  text: false
-  completed_at: 2020-11-11 23:08:43
+  completed: false
+  completed_at: 2020-11-12 01:34:25
   todo_list: one
 
 two:
   description: MyText
-  text: false
-  completed_at: 2020-11-11 23:08:43
+  completed: false
+  completed_at: 2020-11-12 01:34:25
   todo_list: two

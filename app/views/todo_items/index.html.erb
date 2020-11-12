@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Description</th>
-    <th>Text</th>
+    <th>Completed</th>
     <th>Completed at</th>
     <th>Todo list</th>
     <th></th>
@@ -14,7 +14,7 @@
 <% @todo_items.each do |todo_item| %>
   <tr>
     <td><%= todo_item.description %></td>
-    <td><%= todo_item.text %></td>
+    <td><%= todo_item.completed %></td>
     <td><%= todo_item.completed_at %></td>
     <td><%= todo_item.todo_list %></td>
     <td><%= link_to 'Show', [todo_item.todo_list, todo_item] %></td>
