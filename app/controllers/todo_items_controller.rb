@@ -22,10 +22,10 @@ class TodoItemsController < ApplicationController
 
   # POST todo_lists/1/todo_items
   def create
-    @todo_item = @todo_list.todo_items.build(todo_item_params)
+    @todo_item = @todo_list.todo_items.build(@todo_item_params)
 
     if @todo_item.save
-      redirect_to([@todo_item.todo_list, @todo_item], notice: 'Todo item was successfully created.')
+      redirect_to(@todo_item.todo_list)
     else
       render action: 'new'
     end

@@ -1,6 +1,28 @@
 class TodoList < ApplicationRecord
   has_many :todo_items
 
+  def color_badge
+    case percent_complete.to_i
+      when 0
+        'dark'
+      when 100
+        'info'
+      else
+        'primary'
+    end
+  end
+
+  def status
+    case percent_complete.to_i
+      when 0
+        'Nothing happens yet..'
+        when 100
+          'It\'s finished!'
+        else
+          'In progress..'
+    end
+  end
+
   def total_items
     @total_items ||= todo_items.count
   end
