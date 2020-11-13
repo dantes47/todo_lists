@@ -1,7 +1,7 @@
 class TodoList < ApplicationRecord
   has_many :todo_items
 
-  def color_badge
+  def badge_color
     case percent_complete.to_i
       when 0
         'dark'
@@ -15,7 +15,7 @@ class TodoList < ApplicationRecord
   def status
     case percent_complete.to_i
       when 0
-        'Nothing happens yet..'
+        'Nothing done, yet..'
         when 100
           'It\'s finished!'
         else

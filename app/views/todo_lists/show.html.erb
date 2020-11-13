@@ -2,7 +2,7 @@
 
   <div class="row">
     <div class="col-4">
-      <%= link_to todo_lists_path, class: 'btn btn-danger' do %>
+      <%= link_to todo_lists_path, class: 'btn btn-info' do %>
       <i class="far fa-hand-point-left"></i>
       <% end %>
     </div>
@@ -11,7 +11,7 @@
        <div>
          <h5 class='m-0'>
            <b><%= @todo_list.title %></b>
-           <span class="badge badge-<%= @todo_list.color_badge %>"><%= @todo_list.status %></span>
+           <span class="badge badge-<%= @todo_list.badge_color %>"><%= @todo_list.status %></span>
          </h5>
          <p class='text-secondary m-0'><small><%= @todo_list.percent_complete %>% Complete (<%= @todo_list.completed_items %>/<%= @todo_list.total_items %> Todo Items)</small></p>
        </div>
@@ -71,6 +71,17 @@
     <% end %>
     <% end %>
   </ul>
+</div>
+
+<div class="card text-center border-success mb-3">
+  <div class="card-header">
+    Created by
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <footer class="blockquote-footer">DannyⓒElmob for <cite title="Source Title">Ruby❦Garage</cite></footer>
+    </blockquote>
+  </div>
 </div>
 
 

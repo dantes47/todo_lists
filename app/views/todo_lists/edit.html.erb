@@ -1,6 +1,40 @@
-<h1>Editing Todo List</h1>
+<div class="card-header d-flex justify-content-between">
+<div class="card-body">
+   <div class="row">
+    <div class="col-4">
+      <%= link_to 'Show', @todo_list, class: 'btn btn-info' %>
+    </div>
+    <div class="col-8">
+      <div class="d-flex justify-content-between">
+       <div>
+         <h5 class='m-2'>
+                <h5 class="m-0 text-dark">Edit Todo Lists</h5>
+           <%= render 'form', todo_list: @todo_list %>
+         </h5>
+       </div>
+       <div>
+        <%= link_to 'Back', todo_lists_path, class: 'btn btn-success' %>
+      </div>
+    </div>
+    </div>
+</div>
 
-<%= render 'form', todo_list: @todo_list %>
+<div class="card text-center border-warning mb-3">
+  <div class="card-header">
+    Created by
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <footer class="blockquote-footer">DannyⓒElmob for <cite title="Source Title">Ruby❦Garage</cite></footer>
+    </blockquote>
+  </div>
+</div>
 
-<%= link_to 'Show', @todo_list %> |
-<%= link_to 'Back', todo_lists_path %>
+</div>
+
+
+
+
+
+
+
