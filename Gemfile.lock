@@ -250,7 +250,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.4)
+  sqlite3 (~> 1.4, >= 1.4.2)
   stimulus_reflex (~> 3.3)
   turbolinks (~> 5)
   web-console (>= 3.3.0)
